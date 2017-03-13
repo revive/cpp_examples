@@ -1,0 +1,12 @@
+objects = vector_length.o Vector3D.o
+
+CXXFLAGS = -std=c++11
+vector_length: $(objects)
+	g++ $^ -o $@
+
+%.o : %.cc
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+.PHONY: clean
+clean:
+	rm -f vector_length $(objects) *~

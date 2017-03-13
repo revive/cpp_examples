@@ -1,0 +1,11 @@
+vector_length: vector_length.o Vector3D.o
+	g++ -o vector_length vector_length.o Vector3D.o
+
+vector_length.o: vector_length.cc
+	g++ -c -std=c++11 vector_length.cc
+
+Vector3D.o: Vector3D.cc
+	g++ -c -std=c++11 Vector3D.cc
+
+clean:
+	rm -f vector_length vector_length.o Vector3D.o *~
