@@ -10,5 +10,7 @@ int main ()
   print2 (f, f2);
   print2 (d, 99);
   print2 (f, 99);
-  print2 (f, d);
+
+// the compiler will complain that no best matching will be found
+//  print2 (f, d);
 }
