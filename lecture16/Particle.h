@@ -11,16 +11,14 @@ class Particle {
 public:
     using NameType = std::string;
 
-//    Particle () = default;
-
     explicit Particle (const NameType &name = "m0")
         : Particle{{0, 0, 0}, {1, 0, 0}, 1, name} {}
-
-    Particle () : Particle{{0, 0, 0}, {1, 0, 0}, 1, "m0"} {}
 
     Particle (const Vector3D &p, const Vector3D &v, double m, const NameType & name);
 
     Particle (const Particle &o);
+
+    ~Particle () { --count_; }
 
     const Vector3D &GetPosition () const { return pos_; }
 

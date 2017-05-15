@@ -34,4 +34,9 @@ int main ()
     cout << m2.GetName() << endl;
 
     cout << "There are " << Particle::GetCount() << " particles." << endl;
+    {
+        Particle m4;
+        cout << "There are " << Particle::GetCount() << " particles." << endl;
+    }
+    cout << "There are " << Particle::GetCount() << " particles." << endl;
 }
